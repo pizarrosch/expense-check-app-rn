@@ -3,8 +3,13 @@ import {GlobalStyles} from "../constants/styles";
 import {getFormattedDate} from "../utility/date";
 
 export default function ExpenseItem({amount, date, description}) {
+
+  function ExpensePressHandler() {
+    console.log('I am pressed!');
+  }
+
   return (
-    <Pressable>
+    <Pressable onPress={ExpensePressHandler} style={({pressed}) => pressed && styles.pressed}>
       <View style={styles.container}>
         <View>
           <Text style={[styles.textBase, styles.description]}>{description}</Text>
@@ -19,6 +24,9 @@ export default function ExpenseItem({amount, date, description}) {
 }
 
 const styles = StyleSheet.create({
+  pressed: {
+    opacity: 0.75
+  },
   container: {
     padding: 12,
     marginVertical: 8,

@@ -8,6 +8,7 @@ import AllExpenses from "./screens/AllExpenses";
 import RecentExpenses from "./screens/RecentExpenses";
 import {GlobalStyles} from "./constants/styles";
 import {Ionicons} from "@expo/vector-icons";
+import IconButton from "./components/UI/IconButton";
 
 const Stack = createNativeStackNavigator();
 const BottomTab = createBottomTabNavigator();
@@ -22,7 +23,8 @@ function ExpensesOverview() {
       tabBarStyle: {
         backgroundColor: GlobalStyles.colors.primary500
       },
-      tabBarActiveTintColor: GlobalStyles.colors.accent500
+      tabBarActiveTintColor: GlobalStyles.colors.accent500,
+      headerRight: ({tintColor}) => <IconButton icon='add' size={28} color={tintColor}/>
     }}>
       <BottomTab.Screen
         name="RecentExpenses"
