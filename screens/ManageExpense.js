@@ -1,6 +1,7 @@
 import {View, StyleSheet} from 'react-native';
 import {useLayoutEffect} from "react";
 import IconButton from "../components/UI/IconButton";
+import Button from '../components/UI/Button';
 import {GlobalStyles} from "../constants/styles";
 
 export default function ManageExpense({route, navigation}) {
@@ -17,11 +18,12 @@ export default function ManageExpense({route, navigation}) {
 
   return (
     <View style={styles.container}>
+      <Button>Edit</Button>
       {editedExpenseId && (
         <View style={styles.deleteContainer}>
           <IconButton
             icon='trash'
-            size={36}
+            size={28}
             color={GlobalStyles.colors.error500}
             onPress={deleteExpenseFunction}
           />
