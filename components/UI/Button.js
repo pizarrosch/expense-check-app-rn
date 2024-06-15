@@ -16,8 +16,7 @@ export default function Button({children, onPress, mode, style}) {
 const styles = StyleSheet.create({
   container: {
     borderRadius: 4,
-    paddingVertical: 4,
-    paddingHorizontal: 8,
+    padding: 8,
     backgroundColor: GlobalStyles.colors.primary500,
   },
   flat: {
