@@ -55,33 +55,33 @@ function ExpensesOverview() {
 
 export default function App() {
   return (
-   <>
-    <StatusBar barStyle='default'/>
-    <NavigationContainer>
-      <Stack.Navigator screenOptions={{
-        headerStyle: {
-          backgroundColor: GlobalStyles.colors.primary500,
-        },
-        headerTintColor: 'white'
-      }}>
-        <Stack.Screen
-          name='Expenses Overview'
-          component={ExpensesOverview}
-          options={{
-            headerShown: false
-          }}
-        />
-        <Stack.Screen
-          name='ManageExpense'
-          component={ManageExpense}
-          options={{
-            presentation: 'modal'
-        }}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <>
+      <StatusBar barStyle='default'/>
+      <NavigationContainer>
+        <Stack.Navigator screenOptions={{
+          headerStyle: {
+            backgroundColor: GlobalStyles.colors.primary500,
+          },
+          headerTintColor: 'white'
+        }}>
+          <Stack.Screen
+            name='Expenses Overview'
+            component={ExpensesOverview}
+            options={{
+              headerShown: false
+            }}
+          />
+          <Stack.Screen
+            name='ManageExpense'
+            component={ManageExpense}
+            options={{
+              presentation: 'modal'
+            }}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
 
-   </>
+    </>
   )
 }
 
