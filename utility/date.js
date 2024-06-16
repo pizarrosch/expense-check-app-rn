@@ -4,3 +4,7 @@ export function getFormattedDate(date) {
 
   return `${date.getFullYear()}-${month < 10 ? 0 : ''}${month}-${day < 10 ? 0 : ''}${day}`
 }
+
+export function getLastDays(date, days) {
+  return new Date(date.getFullYear(), date.getMonth(), date.getDate() - days);
+}
