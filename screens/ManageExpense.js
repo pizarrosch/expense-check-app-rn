@@ -14,21 +14,22 @@ export default function ManageExpense({route, navigation}) {
   }, []);
 
   function deleteExpenseFunction() {
+    navigation.goBack();
   }
 
   function cancelHandler() {
-
+    navigation.goBack();
   }
 
   function confirmHandler() {
-
+    navigation.goBack();
   }
 
   return (
     <View style={styles.container}>
       <View style={styles.buttonsContainer}>
         <Button style={styles.button} mode='flat' onPress={cancelHandler}>Cancel</Button>
-        <Button style={styles.button} onPress={confirmHandler}>{editedExpenseId ? 'Confirm' : 'Add'}</Button>
+        <Button style={styles.button} onPress={confirmHandler}>{editedExpenseId ? 'Update' : 'Add'}</Button>
       </View>
       {editedExpenseId && (
         <View style={styles.deleteContainer}>
