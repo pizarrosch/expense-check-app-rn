@@ -16,7 +16,6 @@ export default function RecentExpenses() {
       setIsLoading(false);
       expensesCtx.setExpenses(expenses);
     }
-
     getExpenses();
   }, [])
 
